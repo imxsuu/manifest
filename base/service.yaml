@@ -1,0 +1,14 @@
+<deployment.yaml>
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: sjjeon-nginx
+  labels:
+    run: sjjeon-nginx
+spec:
+  ports:
+  - port: 80
+    protocol: TCP
+  selector:
+    run: sjjeon-nginx

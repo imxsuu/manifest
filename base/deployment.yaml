@@ -1,21 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: argocd-test
+  name: sjjeon-nginx
 spec:
   selector:
     matchLabels:
-      run: my-app
+      run: sjjeon-nginx
   replicas: 2
   template:
     metadata:
       labels:
-        run: my-app
+        run: sjjeon-nginx
     spec:
       containers:
-      - name: my-app
-        image: 10.0.1.150:5000/sjjeon/argocd-deploy:120
+      - name: sjjeon-nginx
+        image: nginx
         ports:
         - containerPort: 80
-      imagePullSecrets:
-      - name: regcred
