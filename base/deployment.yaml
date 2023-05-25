@@ -13,12 +13,7 @@ spec:
         run: sjjeon-nginx
     spec:
       containers:
-<<<<<<< HEAD:base/deployment.yaml
       - name: sjjeon-nginx
-        image: nginx
-=======
-      - name: my-app
         image: 10.0.1.150:5000/sjjeon/argocd-deploy:123
->>>>>>> f8a4a9c5138ede837cbc963443d3677577f53041:deployment.yaml
         ports:
         - containerPort: 80
